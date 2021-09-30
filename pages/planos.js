@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import useSWR, { SWRConfig } from 'swr'
 import { useState } from 'react'
 
 const fetcher = async (api) => {
@@ -11,39 +10,19 @@ const fetcher = async (api) => {
     return await res.json()
 }
 
-const API = 'https://motofast-api.herokuapp.com/locais/proximos/04714001/inicio/2021-10-15/fim/2021-10-25'
-export async function getServerSideProps() {
-    const repoInfo = await fetcher(["04714001", "2021-10-15", "2021-10-25"]);
-    return {
-        props: {
-            fallback: {
-                [API]: repoInfo
-            }
-        }
-    };
-}
-
 function Repo() {
-    const [cep, setCep] = useState(null)
-    const [inicio, setInicio] = useState(null)
-    const [fim, setFim] = useState(null)
+    const [cep, setCep] = useState(" ")
+    const [inicio, setInicio] = useState(" ")
+    const [fim, setFim] = useState(" ")
 
-    const {data, error} = useSWR([cep, inicio, fim], fetcher);
+    const [locais, setLocais] = useState([])
 
     const handleSubmit = async (evt) => {
+        console.log("handleSubmit")
         evt.preventDefault();
-        setCep(cep)
-        setInicio(inicio)
-        setFim(fim)
-        // setApi(`https://motofast-api.herokuapp.com/locais/proximos/${cep}/inicio/${inicio}/fim/${fim}`)
-        // alert(`cep ${cep} inicio ${inicio} fim ${fim}`)
+        setLocais(await fetcher([cep, inicio, fim]))        
     }
 
-    // there should be no `undefined` state
-    console.log("Is data ready?", !!data);
-
-    if (error) return "An error has occurred.";
-    if (!data) return "Loading...";
     return (
         <div className={styles.container}>
             <Head>
@@ -58,24 +37,24 @@ function Repo() {
                 </h1>
 
                 <form onSubmit={handleSubmit}>
-                    <label>
-                        CEP:
+                    <label style={{display: "block"}}>
+                        CEP: 
                         <input
                             type="text"
                             value={cep}
                             onChange={e => setCep(e.target.value)}
                         />
                     </label>
-                    <label>
-                        Data Início:
+                    <label style={{display: "block"}}>
+                        Data Início: 
                         <input
                             type="text"
                             value={inicio}
                             onChange={e => setInicio(e.target.value)}
                         />
                     </label>
-                    <label>
-                        Data Final:
+                    <label style={{display: "block"}}>
+                        Data Final: 
                         <input
                             type="text"
                             value={fim}
@@ -86,10 +65,10 @@ function Repo() {
                 </form>
 
                 <ul>
-                    {data.map(local => {
+                    {locais.map(local => {
                         if (local.motos <= 0) return
                         return (
-                            <li style={{listStyle: "none", border: "1px solid black", padding: "1em", margin: "1em"}}>
+                            <li key={local.endereco} style={{listStyle: "none", border: "1px solid black", padding: "1em", margin: "1em"}}>
                                 <p>Endereço: {local.endereco}</p>
                                 <p>Motos Disponíveis: {local.motos}</p>
                             </li>
@@ -116,8 +95,6 @@ function Repo() {
 
 export default function Home({ fallback }) {
     return (
-        <SWRConfig value={{ fallback }}>
-            <Repo />
-        </SWRConfig>
+        <Repo />
     )
 }
