@@ -31,20 +31,20 @@ export default function Parceiros() {
     return (
         <>
         <DropdownButton id="zona" title="Zona">
-            {zonas.map(zona => (
-                <Dropdown.Item onClick={e => setZona(zona)}>{zona}</Dropdown.Item>
+            {zonas.map((zona, index) => (
+                <Dropdown.Item key={index} onClick={e => setZona(zona)}>{zona}</Dropdown.Item>
             ))}
         </DropdownButton>
         <DropdownButton id="turno" title="Turno">
-            {turnos.map(turno => (
-                <Dropdown.Item onClick={e => setTurno(turno.turno)}>{turno.turno}</Dropdown.Item>
+            {turnos.map((turno, index) => (
+                <Dropdown.Item key={index} onClick={e => setTurno(turno.turno)}>{turno.turno}</Dropdown.Item>
             ))}
         </DropdownButton>
         <ul>
             {parceiros
             .filter(p => p.zona.includes(zona) && p.turno.includes(turno))
-            .map(parceiro => (
-                <li>{parceiro.nome} - Zona: {parceiro.zona} - Horário Disponível: {parceiro.horario}</li>
+            .map((parceiro, index) => (
+                <li key={index}>{parceiro.nome} - Zona: {parceiro.zona} - Horário Disponível: {parceiro.horario}</li>
             ))}
         </ul>
         </>
