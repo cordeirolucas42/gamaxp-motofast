@@ -11,7 +11,7 @@ export default function Home() {
         <meta name="description" content="Aluguel de motos" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <div >teste</div>
       <main className={styles.main}>
         <Image width={300} height={300*314/696} src={logo} alt="logo da motofast"/>
         <h1 className={styles.title}>
