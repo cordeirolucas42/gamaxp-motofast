@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap');
+
+.usuario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.dados {
+    width: 90%;    
+    margin-bottom: 200px;
+}
+
+.foto {
+    display: flex;
+    align-items: center;
+}
+
+.foto img {
+    border-radius: 50%;
+}
+
+.detalhesTitulo {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+
+    margin-bottom: 48px;
+    
+    color: #E7643E;
+}
+
+.detalhesConteudo {
+    background: #C4DEEA;
+    border-radius: 8px;
+    padding: 2em 4em;
+}
+
+.label {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;    
+    color: #4B4B4B;
+
+    margin-bottom: 8px;
+}
+
+.text {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;    
+    color: #000000;
+
+    padding: 0.5em;
+    margin-bottom: 24px;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.botaoEditar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.editar {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.105em;
+    color: #FFFFFF;
+
+    width: 90px;
+    padding: 0.5em;
+
+    background: #C4DEEA;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.infos {
+    width: 90%;
+    margin-bottom: 60px;
+}
+
+.titulo {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    
+    margin-bottom: 0.75em;
+
+    color: #E7643E;
+}
+
+.ponto {
+    background-color: #C4DEEA;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.pontoTitulo {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;    
+    color: #E7643E;    
+    mix-blend-mode: normal;
+
+    padding: 0.25em;
+
+    background-color: #C4DEEA;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.pontoEndereco {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;    
+    color: rgba(75, 75, 75, 0.8);    
+    mix-blend-mode: normal;
+
+    padding: 1em;
+    margin-bottom: 32px;
+
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.aluguel {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;    
+    color: rgba(75, 75, 75, 0.8);    
+    mix-blend-mode: normal;
+
+    padding: 0.5em;
+    margin-bottom: 32px;
+
+    background: #C4DEEA;
+    border-radius: 15px;
+}
+
+.aluguel:nth-child(2) {
+    color: #E7643E;
+}
+
+.prazo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.usuario a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.usuario a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.circle {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;    
+    color: #E7643E;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 56px;
+
+    background: #C4DEEA;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.renovacao {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;    
+    color: #FFFFFF;
+
+    padding: 1em;
+
+    background: #E7643E;
+    border-radius: 8px;
+}

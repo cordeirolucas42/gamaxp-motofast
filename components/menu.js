@@ -13,7 +13,7 @@ export default function Menu() {
             <div className={styles.items}>
                 <Link href="#"><a className={styles.item}>Como funciona</a></Link>
                 <Link href="/planos"><a className={styles.item}>Planos</a></Link>
-                <Link href="#"><a className={styles.conta}>Sua conta</a></Link>
+                <Link href="/usuario"><a className={styles.conta}>Sua conta</a></Link>
             </div>
         </nav>
     )

@@ -9,12 +9,12 @@ export default function Layout({children}) {
             <Head>
                 <title>motofast</title>
                 <meta name="description" content="Aluguel de motos" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/logo.png" />
             </Head>
 
             <Menu/>
 
-            <main className={styles.main}>
+            <main>
                 {children}
             </main>
 
