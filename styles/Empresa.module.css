@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap');
+
+.empresa {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 48px 0;
+}
+
+.parceiros {
+    width: 90%;
+}
+
+.parceiros .titulo:nth-child(2) {
+    margin-bottom: 24px;
+}
+
+.titulo {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    
+    color: #E7643E;
+}
+
+.botoes {
+    display: flex;
+    margin-bottom: 48px;
+}
+
+#zona, #turno {
+    background: #E7643E;
+    border: 1px solid #E7643E;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: none;
+
+    margin-right: 16px;
+
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.parceiro {
+    border: 1px solid #E7643E;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding: 1em;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parceiroNome {
+    display: flex;
+    align-items: center;
+}
+
+.parceiroInfos {
+    display: flex;
+    align-items: center;
+}
+
+.parceiroTexto {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: rgba(75, 75, 75, 0.8);
+    mix-blend-mode: normal;
+
+    margin: 0 1em;
+}
