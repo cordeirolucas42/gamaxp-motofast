@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from '../styles/Menu.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Dropdown from "react-bootstrap/Dropdown";
 import Image from 'next/image'
 import logo from '../public/motofast.png'
 
@@ -13,7 +13,16 @@ export default function Menu() {
             <div className={styles.items}>
                 <Link href="#"><a className={styles.item}>Como funciona</a></Link>
                 <Link href="/planos"><a className={styles.item}>Planos</a></Link>
-                <Link href="/usuario"><a className={styles.conta}>Sua conta</a></Link>
+                <Dropdown>
+                    <Dropdown.Toggle id={styles.conta}>
+                        Sua conta
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu align="end">
+                        <Dropdown.Item href="/usuario">Aluguel</Dropdown.Item>
+                        <Dropdown.Item href="/empresa">Empresa</Dropdown.Item>
+                        <Dropdown.Item href="#">Motofaster</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
             </div>
         </nav>
     )
