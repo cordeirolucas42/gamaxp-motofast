@@ -20,7 +20,7 @@ export default function Menu() {
                     <Dropdown.Menu align="end">
                         <Dropdown.Item href="/usuario">Aluguel</Dropdown.Item>
                         <Dropdown.Item href="/empresa">Empresa</Dropdown.Item>
-                        <Dropdown.Item href="#">Motofaster</Dropdown.Item>
+                        <Dropdown.Item href="/motofaster">Motofaster</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>

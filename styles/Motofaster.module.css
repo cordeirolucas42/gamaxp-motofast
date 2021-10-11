@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap');
+
+.motofaster {
+    width: 90%;
+    margin: 48px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.historico {
+    width: 100%;
+}
+
+.trabalho {
+    border: 1px solid #E7643E;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding: 1em;
+    margin: 0 35px 10px 35px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    align-self: flex-start;
+
+    margin-left: 35px;
+
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    
+    color: #E7643E;
+}
+
+.botao {
+    align-self: flex-start;
+
+    background: #E7643E;
+    border: 1px solid #E7643E;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: none;
+
+    padding: 0.5em;
+    margin: 0 16px 48px 35px;
+    text-decoration: none;
+
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.botao:hover {
+    color: #FFFFFF;
+}
+
+.header {
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 20px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;    
+    color: rgba(75, 75, 75, 0.8);    
+    mix-blend-mode: normal;
+}
+
+.infos {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: rgba(75, 75, 75, 0.5);
+    mix-blend-mode: normal;
+}
