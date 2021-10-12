@@ -1,7 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Planos.module.css'
+import moto from '../public/parceiro.png'
+import local from '../public/local.png'
+import lupa from '../public/lupa.png'
+import arrows from '../public/arrows.png'
 import { useState } from 'react'
+import Layout from '../components/layout'
+import Image from "next/dist/client/image";
 
 const fetcher = async (api) => {
     const [cep, inicio, fim] = api
@@ -11,9 +15,9 @@ const fetcher = async (api) => {
 }
 
 function Repo() {
-    const [cep, setCep] = useState(" ")
-    const [inicio, setInicio] = useState(" ")
-    const [fim, setFim] = useState(" ")
+    const [cep, setCep] = useState("")
+    const [inicio, setInicio] = useState("")
+    const [fim, setFim] = useState("")
 
     const [locais, setLocais] = useState([])
 
@@ -24,76 +28,93 @@ function Repo() {
     }
 
     return (
-        <div className={styles.container}>
-            <Head>
-                <title>motofast</title>
-                <meta name="description" content="Aluguel de motos" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+        <Layout>
+            <div className={styles.planos}>
+                <h2 className={styles.title}>
+                    Planos
+                </h2>
 
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    motofast
-                </h1>
+                <p className={styles.subtitle}>Vamos simular o plano perfeito da Motofast para você?</p>
 
-                <form onSubmit={handleSubmit}>
-                    <label style={{display: "block"}}>
-                        CEP: 
+                <form className={styles.form} onSubmit={handleSubmit}>
+                    <div className={styles.local}>
+                        <Image layout="fixed" src={local} alt="ícone de local"/>
+                    </div>
+
+                    <div className={styles.input}>
+                        <label htmlFor="name" className={styles.label}>Sua Localização:</label>
                         <input
+                            id="name"
                             type="text"
+                            placeholder="05124-000"
+                            className={styles.textInput}
                             value={cep}
                             onChange={e => setCep(e.target.value)}
                         />
-                    </label>
-                    <label style={{display: "block"}}>
-                        Data Início: 
+                    </div>
+
+                    <div className={styles.input}>
+                        <label htmlFor="inicio" className={styles.label}>Data Início:</label>
                         <input
+                            id="inicio"
                             type="text"
+                            placeholder="qui., 14 de out."
+                            className={styles.textInput}
                             value={inicio}
                             onChange={e => setInicio(e.target.value)}
                         />
-                    </label>
-                    <label style={{display: "block"}}>
-                        Data Final: 
+                    </div>
+                    <div className={styles.arrows}>
+                        <Image layout="fixed" src={arrows} alt="ícone de setas"/>
+                    </div>
+
+                    <div className={styles.input}>
+                        <label htmlFor="fim" className={styles.label}>Data Final:</label>
                         <input
+                            id="fim"
                             type="text"
+                            placeholder="qui., 14 de out."
+                            className={styles.textInput}
                             value={fim}
                             onChange={e => setFim(e.target.value)}
                         />
-                    </label>
-                    <input type="submit" value="Submit" />
+                    </div>
+
+                    <button className={styles.submit} type="submit">
+                        <Image width={37} height={37} layout="fixed" src={lupa} alt="ícone de lupa"/>
+                    </button>
                 </form>
 
-                <ul>
-                    {locais.map(local => {
-                        if (local.motos <= 0) return
-                        return (
-                            <li key={local.endereco} style={{listStyle: "none", border: "1px solid black", padding: "1em", margin: "1em"}}>
-                                <p>Endereço: {local.endereco}</p>
-                                <p>Motos Disponíveis: {local.motos}</p>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </main>
-
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                    </span>
-                </a>
-            </footer>
-        </div>
+                {locais.map(local => {
+                    if (local.motos <= 0) return
+                    return (
+                        <div key={local.endereco} className={styles.ponto}>
+                            <h3 className={styles.nome}>Ponto 1 - ZONA NORTE</h3>
+                            <div className={styles.infos}>
+                                <div className={styles.col}>
+                                    <div className={styles.moto}>
+                                        <Image layout="fixed" src={moto} alt="ícone de moto"/>
+                                        <span className={styles.qty}>{local.motos}</span>
+                                        <span className={styles.texto}>&nbsp;motofast disponíveis</span>
+                                    </div>
+                                    {/* <p className={styles.endereco}>{local.endereco}</p> */}
+                                    <p className={styles.endereco}>Av. Jardim América, 122 - Pq. Flores </p>
+                                </div>
+                                <div className={styles.col}>
+                                    <p className={styles.plano}>Plano Semanal</p>
+                                    <p className={styles.preco}><span className={styles.destaque}>R$37,</span>99/Dia</p>
+                                    <p className={styles.descricao}>Nesse plano você paga o total de <span className={styles.total}>R$265,93</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>            
+        </Layout>
     );
 }
 
-export default function Home({ fallback }) {
+export default function Home() {
     return (
         <Repo />
     )

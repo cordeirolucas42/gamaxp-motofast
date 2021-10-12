@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap');
+
+.planos {
+    width: 80%;
+    margin: 48px auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 48px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    color: #E7643E;
+}
+
+.subtitle {
+    margin-bottom: 86px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    
+    color: #000000;   
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    padding: 2.5em 2em;
+
+    background: #C4DEEA;
+    border-radius: 15px;
+}
+
+.local {
+    margin-bottom: 8px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.arrows {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;    
+    color: #626262;
+
+    margin-bottom: 8px;
+}
+
+.textInput {
+    border: 0.7em solid #E7643E;
+    border-radius: 15px;
+    outline: none;
+    padding: 0.2em 0;
+    width: 20vw;
+    text-align: center;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    text-align: center;
+    color: #000000
+}
+
+.textInput::placeholder {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.submit {
+    margin-bottom: 15px;
+    padding: 8px 8px 2px 8px;
+    background: #E7643E;
+    border-radius: 15px;
+    box-shadow: none;
+    border: none;
+}
+
+.ponto {
+    width: 100%;
+    border: 1px solid #E7643E;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.nome {
+    margin-top: 40px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.3em;    
+    color: #E7643E;    
+}
+
+.infos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.col {
+    margin: 25px 0;
+}
+
+.moto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.qty {
+    margin-left: 15px;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;    
+    color: #E7643E;    
+    mix-blend-mode: normal;
+}
+
+.texto {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32.74px;
+    text-align: center;
+    color: rgba(75, 75, 75, 0.8);
+    mix-blend-mode: normal;
+}
+
+.endereco {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;    
+    color: rgba(75, 75, 75, 0.8);
+}
+
+.plano {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    color: rgba(75, 75, 75, 0.8);
+    mix-blend-mode: normal;
+}
+
+.preco {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32.74px;
+    text-align: center;    
+    color: #E7643E;
+}
+
+.destaque {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;    
+    color: #E7643E;
+}
+
+.descricao {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;    
+    text-align: center;    
+    color: rgba(75, 75, 75, 0.8);
+}
+
+.total {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;    
+    text-align: center;    
+    color: #E7643E;
+}
