@@ -13,27 +13,27 @@ export default function Footer() {
             <Row className={styles.footerRow}>
                 <Col className={styles.leftCol}>
                     <div>
-                        <span className={styles.contactInfo}>Rua Rosa Siqueira, 333 -<br />
-                        Vila Agostinho, São Paulo - SP</span>
+                        <p className={styles.contactInfo}>Rua Rosa Siqueira, 333 -</p>
+                        <p className={styles.contactInfo}>Vila Agostinho, São Paulo - SP</p>
                     </div>
                     <div>
-                        <span className={styles.wpSupport}>Suporte via Whatsapp</span><br />
-                        <span className={styles.contactInfo}>(11) 3322-0001</span>
+                        <p className={styles.wpSupport}>Suporte via Whatsapp</p>
+                        <p className={styles.contactInfo}>(11) 3322-0001</p>
                     </div>
                 </Col>
-                <Col xs={5} className={styles.middleCol}>
+                <Col xs={5} lg className={styles.middleCol}>
                     <div>
                         <p className={styles.redesSociais}>NOS SIGA NAS NOSSAS REDES SOCIAIS!</p>
                     </div>
                     <div className={styles.icons}>
                         <div className={styles.icon}>
-                            <Image layout="fixed" src={fb} alt="logo facebook"/>
+                            <Image src={fb} alt="logo facebook"/>
                         </div>
                         <div className={styles.icon}>
-                            <Image layout="fixed" src={wp} alt="logo whatsapp"/>
+                            <Image src={wp} alt="logo whatsapp"/>
                         </div>
                         <div className={styles.icon}>
-                            <Image layout="fixed" src={ig} alt="logo instagram"/>
+                            <Image src={ig} alt="logo instagram"/>
                         </div>
                     </div>
                 </Col>
@@ -42,13 +42,13 @@ export default function Footer() {
                 </Col>
             </Row>
             <Row className={styles.footerRow}>
-                <Col className={styles.leftCol}>
+                <Col xs={5} lg className={styles.termosUso}>
                     <span className={styles.termos}>TERMOS DE USO</span>
                 </Col>
-                <Col xs={5} className={styles.middleCol}>
+                <Col xs={7} lg={5} className={styles.termosPriv}>
                     <p className={styles.termos}>POLÍTICA DE PRIVACIDADE</p>
                 </Col>
-                <Col className={styles.rightCol}>
+                <Col xs={12} lg className={styles.termosLoc}>
                     <p className={styles.termos}>CONTRATO DE LOCAÇÃO</p>
                 </Col>
             </Row>
