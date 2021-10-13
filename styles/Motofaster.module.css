@@ -12,6 +12,7 @@
 
 .historico {
     width: 100%;
+    justify-content: space-evenly;
 }
 
 .trabalho {
@@ -20,7 +21,7 @@
     border-radius: 8px;
 
     padding: 1em;
-    margin: 0 35px 10px 35px;
+    margin-bottom: 1em;
 
     display: flex;
     flex-flow: column nowrap;
@@ -28,19 +29,23 @@
     align-items: center;
 }
 
-.titulo {
+.motofaster > p {
     align-self: flex-start;
-
     margin-left: 35px;
+}
 
+.motofaster > p > span:nth-child(2) {
+    display: block;
+}
+
+.titulo {
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.125em;
-    text-transform: uppercase;
-    
+    text-transform: uppercase;    
     color: #E7643E;
 }
 
@@ -90,6 +95,15 @@
     mix-blend-mode: normal;
 }
 
+.header > div {
+    display: flex;
+    align-items: center;
+}
+
+.header > div > span {
+    margin-left: 1em;
+}
+
 .infos {
     width: 90%;
     display: flex;
@@ -103,4 +117,70 @@
     text-align: center;
     color: rgba(75, 75, 75, 0.5);
     mix-blend-mode: normal;
+}
+
+@media (max-width: 1280px) {
+    .historico {
+        width: 90%;
+    }
+
+    .trabalho {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    .motofaster > p {
+        align-self: center;
+        margin-left: 0;
+    }
+    
+    .motofaster > p > span:nth-child(2) {
+        display: inline;
+    }
+    
+    .titulo {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .botao {
+        align-self: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header > div {
+        margin-bottom: 0.5em;
+    }
+
+    .header > div > span {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .header > span {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .header > a {
+        position: absolute;
+        right: 15px;
+        bottom: 5px;
+    }
+    
+    .infos {
+        align-items: center;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: left;
+    }
 }

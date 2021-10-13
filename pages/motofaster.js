@@ -16,8 +16,10 @@ export default function Motofaster() {
                 endereco1="Rua Andrade Bento, 65 - Vila Buarque,"
                 endereco2="São Paulo SP - 010240-00"
             />
-            <h2 className={styles.titulo}>MOTOFASTER</h2>
-            <h2 className={styles.titulo}>PARCEIROS</h2>
+            <p>
+              <span className={styles.titulo}>MOTOFASTER </span>
+              <span className={styles.titulo}>PARCEIROS</span>
+            </p>
             <a href="#" className={styles.botao}>HISTÓRICO</a>
             <Historico/>
         </div>
