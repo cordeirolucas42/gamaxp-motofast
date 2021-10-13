@@ -47,7 +47,7 @@
     border-radius: 15px;
     box-shadow: none;
 
-    padding: 15px 30px;
+    padding: 0.7em 1.4em;
 
     font-family: Quicksand;
     font-style: normal;
@@ -58,4 +58,29 @@
     letter-spacing: 0.105em;
 
     color: #FFFFFF;
+}
+
+@media (max-width: 1280px) {
+    .menu {
+        width: 98%;
+        height: 70px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 33%;
+    }
+    
+    .items {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .item, #conta {
+        font-size: 10px;
+        line-height: 12px;
+        margin: 0;
+    }
 }
