@@ -1,3 +1,4 @@
+import { Col, Row } from 'react-bootstrap'
 import styles from '../styles/Usuario.module.css'
 
 export default function Pontos() {
@@ -32,13 +33,15 @@ export default function Pontos() {
     return (
         <div>
             <h2 className={styles.titulo}>PONTOS DE ENTREGA</h2>
-            {pontos.map((ponto, idx) => (
-                <div key={idx}>
-                    <div className={styles.pontoTitulo}>{ponto.titulo}</div>
-                    <div className={styles.pontoEndereco}>{ponto.endereco}<br />
-                    {ponto.bairro}</div>
-                </div>
-            ))}
+            <Row>
+                {pontos.map((ponto, idx) => (
+                    <Col xs={6} lg={12} key={idx}>
+                        <div className={styles.pontoTitulo}>{ponto.titulo}</div>
+                        <div className={styles.pontoEndereco}>{ponto.endereco}<br />
+                        {ponto.bairro}</div>
+                    </Col>
+                ))}
+            </Row>
         </div>
     )
 }

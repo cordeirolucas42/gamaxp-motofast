@@ -18,11 +18,11 @@ export default function Usuario() {
                     endereco2="São Paulo SP - 05114-00"
                 />
                 <Row className={styles.infos}>
-                    <Col xs={5}>
+                    <Col className={styles.pontos} lg={5}>
                         <Pontos/>
                     </Col>
-                    <Col xs={2}></Col>
-                    <Col xs={5}>
+                    <Col lg={2}></Col>
+                    <Col className={styles.detalhes} lg={5}>
                         <div className={styles.alugueis}>
                             <h2 className={styles.titulo}>ALUGUÉIS</h2>
                             <div className={styles.aluguel}>
