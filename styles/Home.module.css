@@ -14,10 +14,153 @@
   background-color: #C4DEEA;
 }
 
+.background {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 716px;
+  width: 100%;
+  background: url(../public/home-background.png) center top;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.boxhome {
+	background: #ffffffb3;
+	width: 27.058%;
+	height: 50.978%;
+	border-radius: 100%;
+	left: 50px;
+	top: 175px;
+	position: relative;
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+}
+
+.imgconfig {
+    margin: 0 auto;
+    width: 82%;
+    top: 80px;
+    text-align: right;
+    position: relative;
+}
+
+.imgconfig p {
+	width: 71%;
+    float: right;
+    margin-right: 13px;
+    font-size: 18px;
+    margin-top: -35px;
+}
+
+.boxsoptions {
+	float: left;
+    width: 306px;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 25px;
+}
+
+.agilidade {
+	margin-top: 50px;
+}
+
+.seguranca {
+	margin-top: 20px;
+}
+
+.economia {
+	margin-top: 28px;
+}
+
+.facilidade {
+	margin-top: 59px;
+}
+
+.pqalugar {
+	width: 100%;
+    background: white;
+    float: left;
+	    margin-bottom: 50px;
+}
+
+.title {
+    margin-bottom: 60px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    color: #E7643E;
+}
+
+.tresmodas {
+  background: #C4DEEA;
+    float: left;
+    width: 100%;
+	padding-top: 50px;
+}
+
+.boxsoptionsmodes {
+    float: left;
+    width: 388px;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 40px;
+}
+
+.boxsoptionsmodes p {
+height: 96px;
+}
+
+.number {
+	color: #000000;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 288px;
+    text-align: left;
+    opacity: 0.1;
+    float: left;
+    text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+	margin-top: -32px;
+}
+
+a.optresmodas {
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 170px;
+    float: right;
+    margin-top: 18px;
+}
+
+a.optresmodas:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.optresmodas {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;    
+    color: #FFFFFF;
+
+    padding: 1em;
+
+    background: #E7643E;
+    border-radius: 8px;
 }
 
 .title,
