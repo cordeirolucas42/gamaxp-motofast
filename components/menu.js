@@ -11,7 +11,7 @@ export default function Menu() {
                 <a className={styles.logo}><Image width={361} height={361*314/696} src={logo} alt="logo da motofast"/></a>
             </Link>
             <div className={styles.items}>
-                <Link href="#"><a className={styles.item}>Como funciona</a></Link>
+                <Link href="/como-funciona"><a className={styles.item}>Como funciona</a></Link>
                 <Link href="/planos"><a className={styles.item}>Planos</a></Link>
                 <Dropdown>
                     <Dropdown.Toggle id={styles.conta}>
