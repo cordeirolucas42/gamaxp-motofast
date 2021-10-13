@@ -5,12 +5,16 @@ import styles from '../styles/Dados.module.css'
 export default function Dados({foto, titulo, nome, cnh, endereco1, endereco2}) {
     return (
         <Row className={styles.dados}>
-            <Col xs={4} className={styles.foto}>
-                <Image layout="fixed" width={350} height={350} src={foto} alt="logo da motofast"/>
-            </Col>
-            <Col xs={1}></Col>
-            <Col xs={7} className={styles.detalhes}>
+            <Col lg={12}>
                 <h2 className={styles.detalhesTitulo}>{titulo}</h2>
+            </Col>
+            <Col xs={12} lg={4}>
+                <div className={styles.foto}>
+                    <Image width={350} height={350} src={foto} alt="foto do usuário"/>
+                </div>
+            </Col>
+            <Col xs={0} lg={1}></Col>
+            <Col xs={12} lg={7} className={styles.detalhes}>
                 <div className={styles.detalhesConteudo}>
                     <p className={styles.label}>Nome</p>
                     <p className={styles.text}>{nome}</p>

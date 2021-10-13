@@ -34,7 +34,9 @@
     letter-spacing: 0.125em;
     text-transform: uppercase;
 
-    margin-bottom: 48px;
+    width: 50%;
+    margin-left: auto;
+    margin-bottom: 1.5em;
     
     color: #E7643E;
 }
@@ -87,7 +89,7 @@
     letter-spacing: 0.105em;
     color: #FFFFFF;
 
-    width: 90px;
+    width: 7em;
     padding: 0.5em;
 
     background: #C4DEEA;
@@ -95,4 +97,48 @@
     box-sizing: border-box;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 1280px) {
+    .dados {
+        width: 98%;    
+        margin-bottom: 100px;
+    }
+    
+    .detalhesTitulo {
+        font-size: 16px;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    .foto {
+        width: 35%;
+        margin: 0 auto 32px auto;
+    }
+    
+    .detalhesConteudo {
+        border-radius: 8px;
+    }
+    
+    .label {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .text {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+    .botaoEditar {
+        justify-content: center;
+    }
+    
+    .editar {
+        font-size: 8px;
+        line-height: 10px;
+        box-shadow: none;
+        border-width: 1px;
+        border-radius: 4px;
+    }
 }
