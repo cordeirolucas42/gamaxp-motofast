@@ -14,7 +14,7 @@ const fetcher = async (api) => {
     return await res.json()
 }
 
-function Repo() {
+export default function Home() {
     const [cep, setCep] = useState("")
     const [inicio, setInicio] = useState("")
     const [fim, setFim] = useState("")
@@ -38,11 +38,11 @@ function Repo() {
 
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.local}>
-                        <Image layout="fixed" src={local} alt="ícone de local"/>
+                        <Image src={local} alt="ícone de local"/>
                     </div>
 
                     <div className={styles.input}>
-                        <label htmlFor="name" className={styles.label}>Sua Localização:</label>
+                        <label htmlFor="name" className={styles.label}>Sua localização</label>
                         <input
                             id="name"
                             type="text"
@@ -53,8 +53,10 @@ function Repo() {
                         />
                     </div>
 
+                    <hr className={styles.mobileLineBreak} />
+
                     <div className={styles.input}>
-                        <label htmlFor="inicio" className={styles.label}>Data Início:</label>
+                        <label htmlFor="inicio" className={styles.label}>Data início</label>
                         <input
                             id="inicio"
                             type="text"
@@ -65,11 +67,11 @@ function Repo() {
                         />
                     </div>
                     <div className={styles.arrows}>
-                        <Image layout="fixed" src={arrows} alt="ícone de setas"/>
+                        <Image src={arrows} alt="ícone de setas"/>
                     </div>
 
                     <div className={styles.input}>
-                        <label htmlFor="fim" className={styles.label}>Data Final:</label>
+                        <label htmlFor="fim" className={styles.label}>Data final</label>
                         <input
                             id="fim"
                             type="text"
@@ -81,7 +83,7 @@ function Repo() {
                     </div>
 
                     <button className={styles.submit} type="submit">
-                        <Image width={37} height={37} layout="fixed" src={lupa} alt="ícone de lupa"/>
+                        <Image width={37} height={37} src={lupa} alt="ícone de lupa"/>
                     </button>
                 </form>
 
@@ -111,11 +113,5 @@ function Repo() {
                 })}
             </div>            
         </Layout>
-    );
-}
-
-export default function Home() {
-    return (
-        <Repo />
     )
 }

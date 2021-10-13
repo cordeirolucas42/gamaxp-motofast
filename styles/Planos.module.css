@@ -2,7 +2,7 @@
 
 .planos {
     width: 80%;
-    margin: 48px auto;
+    margin: 3em auto;
 
     display: flex;
     flex-flow: column nowrap;
@@ -11,7 +11,7 @@
 }
 
 .title {
-    margin-bottom: 48px;
+    margin-bottom: 1.5em;
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
@@ -24,7 +24,7 @@
 }
 
 .subtitle {
-    margin-bottom: 86px;
+    margin-bottom: 3em;
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
@@ -44,6 +44,15 @@
 
     background: #C4DEEA;
     border-radius: 15px;
+}
+
+.mobileLineBreak {
+    height: 0;
+    margin: 0;
+    border: 0;
+}
+.mobileLineBreak:not([size]) {
+    height: 0;
 }
 
 .local {
@@ -69,7 +78,7 @@
     text-align: center;    
     color: #626262;
 
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 }
 
 .textInput {
@@ -117,7 +126,7 @@
 }
 
 .nome {
-    margin-top: 40px;
+    margin-top: 2em;
 
     font-family: Roboto;
     font-style: normal;
@@ -136,7 +145,7 @@
 }
 
 .col {
-    margin: 25px 0;
+    margin: 1em 0;
 }
 
 .moto {
@@ -146,7 +155,7 @@
 }
 
 .qty {
-    margin-left: 15px;
+    margin-left: 0.5em;
 
     font-family: Nunito;
     font-style: normal;
@@ -223,9 +232,128 @@
 .total {
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;    
+    font-weight: bold;  
     text-align: center;    
     color: #E7643E;
+}
+
+@media (max-width: 1280px) {
+    .planos {
+        width: 90%;
+    }
+    
+    .title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .subtitle {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    
+    .form {
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        padding: 1.5em 1em;
+    }
+
+    .mobileLineBreak {
+        flex-basis: 100%;
+    }
+    
+    .local {
+        width: 15px;
+        margin-bottom: 0.5em;
+        margin-right: 0.25em;
+    }
+    
+    .label {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+    .textInput {
+        border-radius: 5px;
+        width: 25vw;
+    
+        font-size: 8px;
+        line-height: 11px;
+    }
+
+    .form > * {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
+    .form > div:nth-child(2) {
+        margin-right: 20px;
+    }
+
+    .form > div:nth-child(2) > .textInput  {
+        width: 30vw;
+        margin-bottom: 1.5em;
+    }
+    
+    .arrows {
+        width: 12px;
+        margin-bottom: 0;
+    }
+    
+    .textInput::placeholder {
+        font-size: 8px;
+        line-height: 11px;
+    }
+    
+    .submit {
+        width: 20px;
+        margin-bottom: 0;
+        padding: 2px 4px 0px 4px;
+        border-radius: 6px;
+    }
+    
+    .nome {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    .infos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .qty {font-size: 26px;
+        line-height: 35px;
+    }
+    
+    .texto {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .endereco {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    .plano {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .preco {
+        font-size: 16px;
+        line-height: 21.82px;
+    }
+    
+    .destaque {
+        font-size: 24px;
+        line-height: 33px;
+    }
+    
+    .descricao {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
