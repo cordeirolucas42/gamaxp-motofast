@@ -34,8 +34,8 @@ export default function Parceiros() {
         
     return (
         <div className={styles.parceiros}>
-            <h2 className={styles.titulo}>MOTOFASTER</h2>
-            <h2 className={styles.titulo}>PARCEIROS</h2>
+            <p><span className={styles.titulo}>MOTOFASTER </span>
+            <span className={styles.titulo}>PARCEIROS</span></p>
 
             <div className={styles.botoes}>
                 <DropdownButton id={styles.zona} title="Zona">
@@ -63,7 +63,7 @@ export default function Parceiros() {
                             Zona: {parceiro.zona}
                         </span>
                         <span className={styles.parceiroTexto}>
-                            Horário Disponível: {parceiro.horario}
+                            Horário Disponível: <span>{parceiro.horario}</span>
                         </span>
                         <a href="#">
                             <Image layout="fixed" width={30} height={34} src={wpp} alt="logo do whatsapp"/>

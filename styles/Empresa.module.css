@@ -13,8 +13,12 @@
     width: 90%;
 }
 
-.parceiros .titulo:nth-child(2) {
-    margin-bottom: 24px;
+.parceiros > p {
+    margin-bottom: 1.5em;
+}
+
+.parceiros > p > span:nth-child(2) {
+    display: block;
 }
 
 .titulo {
@@ -25,13 +29,16 @@
     line-height: 40px;
     letter-spacing: 0.125em;
     text-transform: uppercase;
-    
     color: #E7643E;
 }
 
 .botoes {
     display: flex;
-    margin-bottom: 48px;
+    margin-bottom: 3em;
+}
+
+#zona {
+    margin-right: 16px;
 }
 
 #zona, #turno {
@@ -40,8 +47,6 @@
     box-sizing: border-box;
     border-radius: 8px;
     box-shadow: none;
-
-    margin-right: 16px;
 
     font-family: Quicksand;
     font-style: normal;
@@ -89,4 +94,70 @@
     mix-blend-mode: normal;
 
     margin: 0 1em;
+}
+
+@media (max-width: 1280px) {    
+    .parceiros {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .titulo {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .parceiros > p {
+        text-align: center;
+    }
+
+    .parceiros > p > span:nth-child(2) {
+        display: inline;
+    }
+    
+    .parceiro {
+        border-radius: 4px;
+        flex-flow: column nowrap;
+        position: relative;
+    }
+
+    .parceiroInfos {
+        flex-flow: column nowrap;
+    }
+    
+    .parceiroTexto {
+        font-size: 12px;
+        line-height: 16px;    
+        margin: 0;
+    }
+
+    .parceiroTexto > span {
+        display: block;
+    }
+
+    .parceiroNome {
+        margin-bottom: 0.5em;
+    }
+
+    .parceiroNome > .parceiroTexto {
+        font-size: 20px;
+        line-height: 27px;
+        margin-left: 1.5em;
+    }
+    
+    .parceiroInfos {
+        display: flex;
+        align-items: center;
+    }
+
+    .parceiroInfos > a {
+        position: absolute;
+        right: 15px;
+        bottom: 5px;
+    }
 }
