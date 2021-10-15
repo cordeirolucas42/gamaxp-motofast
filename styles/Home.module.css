@@ -35,6 +35,10 @@
 	position: relative;
 }
 
+.centralizador {
+	display: flex;
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
@@ -62,23 +66,56 @@
     width: 306px;
     text-align: center;
     margin: 0 auto;
-    margin-left: 25px;
+	
+}
+
+.boxsoptions p {
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
 }
 
 .agilidade {
 	margin-top: 50px;
+font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
 }
 
 .seguranca {
 	margin-top: 20px;
+	font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
 }
 
 .economia {
 	margin-top: 28px;
+	font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
 }
 
 .facilidade {
 	margin-top: 59px;
+	font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
 }
 
 .pqalugar {
@@ -93,7 +130,7 @@
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 45px;
     text-align: center;
     letter-spacing: 0.125em;
@@ -110,14 +147,28 @@
 
 .boxsoptionsmodes {
     float: left;
-    width: 388px;
+    width: 412px;
     text-align: center;
     margin: 0 auto;
-    margin-left: 40px;
 }
 
 .boxsoptionsmodes p {
 height: 96px;
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+}
+
+.boxsoptionsmodes h2 {
+font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
 }
 
 .number {
@@ -130,23 +181,42 @@ height: 96px;
     opacity: 0.1;
     float: left;
     text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-	margin-top: -32px;
+	margin-top: -50px;
 }
 
 a.optresmodas {
     text-decoration: none;
     color: #FFFFFF;
     width: 170px;
-    float: right;
-    margin-top: 18px;
+    display: flex;
+    margin-left: 168px;
+    margin-top: 24px;
 }
 
-a.optresmodas:hover {
+a.optresmodas2 {
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 170px;
+    display: flex;
+    margin-left: 204px;
+    margin-top: 24px;
+}
+
+a.optresmodas3 {
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 170px;
+    display: flex;
+    margin-left: 208px;
+    margin-top: 24px;
+}
+
+a.optresmodas:hover, a.optresmodas2:hover, a.optresmodas3:hover {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-.optresmodas {
+.optresmodas, .optresmodas2, .optresmodas3 {
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
@@ -187,9 +257,41 @@ a.optresmodas:hover {
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  
+  .centralizador {
+	flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .boxhome {
+	background: #ffffffb3;
+    width: 200px;
+    height: 199px;
+    border-radius: 100%;
+    left: 50px;
+    top: 70px;
+    position: relative;
+}
+.imgconfig {
+    top: 48px;
+}
+.imgconfig p {
+font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    position: relative;
+    line-height: 14px;
+    margin-top: -20px;
+    left: 17px;
+    text-align: left;
+}
+.background {
+  height: 382px;
+}
 }
