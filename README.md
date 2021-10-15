@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏍️ motofast
 
-## Getting Started
+A FORMA MAIS RÁPIDA DE IR EM BUSCA DOS SEUS SONHOS
 
-First, run the development server:
+## Aplicação motofast
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+UI desenvolvida pelo time Hipster: https://www.figma.com/file/U0XH9kxFqqBYiHRJ57ycEP/Motofast---Projeto-Chef%C3%A3o?node-id=0%3A1
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Páginas:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* **Página inicial**: https://motofast.vercel.app/
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  Overview do serviço
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* **Como funciona:** https://motofast.vercel.app/como-funciona
 
-## Learn More
+  Passo a passo e moto padrão
 
-To learn more about Next.js, take a look at the following resources:
+* **Planos:** https://motofast.vercel.app/planos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  Usuário insere CEP, data de início do aluguel e data de devolução, e a aplicação retorna o ponto de aluguel mais próximo que tenha motos disponíveis, indicando também o plano mais adequado e o total
+  
+  Endpoint da API relacionado (com exemplo): https://motofast-api.herokuapp.com/locais/proximos/04714001/inicio/2021-11-15/fim/2021-12-20
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* **Sua conta - aluguel:** https://motofast.vercel.app/usuario
 
-## Deploy on Vercel
+  No caso de um usuário que busca alugar motos pontualmente, a página Sua Conta mostra os pontos de aluguel, o histórico de aluguel e o prazo de devolução
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Sua conta - empresa:** https://motofast.vercel.app/empresa
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  No caso de uma empresa que busca contratar parceiros motofasters para auxiliar em seu negócio, a página Sua Conta mostra a lista de parceiros podendo ser filtrada por zona da cidade e horário
+  
+  Endpoint da API relacionado (com exemplo): https://motofast-api.herokuapp.com/motofasters/zona/Norte/turno/Tarde
+
+* **Sua conta - motofaster:** https://motofast.vercel.app/motofaster
+
+  No caso de um paceiro motofaster que busca ser contratado por seus serviços, a página Sua Conta mostra o histórico de corridas
+
+<hr>
+
+## Tecnologias Utilizadas [Frontend]
+
+* Next.js
+* React
+* Bootstrap
+
+Link para repositório backend: https://github.com/cordeirolucas42/gamaxp-api-motofast
