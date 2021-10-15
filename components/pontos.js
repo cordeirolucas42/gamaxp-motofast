@@ -5,28 +5,28 @@ export default function Pontos() {
     const pontos = [
         {
             titulo: "Ponto 1 - ZONA NORTE",
-            endereco: "Av. Jardim América, 122 -",
-            bairro: "Pq. Flores"
+            endereco: "Rua Correia de Melo, 98 -",
+            bairro: "Bom Retiro"
         },
         {
             titulo: "Ponto 2 - ZONA SUL",
-            endereco: "Av. Jardim Sul, 111 -",
-            bairro: "Pq. da Floresta"
+            endereco: "R. Bela Vista, 857 -",
+            bairro: "Santo Amaro"
         },
         {
             titulo: "Ponto 3 - ZONA LESTE",
-            endereco: "Av. Jardim México, 100 -",
-            bairro: "Pq. das Árvores"
+            endereco: "Rua Padre Estevão Pernet, 420 -",
+            bairro: "Vila Gomes Cardim"
         },
         {
             titulo: "Ponto 4 - ZONA OESTE",
-            endereco: "Av. Jardim Espanhol, 333 -",
-            bairro: "Pq. Belo"
+            endereco: "R. Heitor Penteado, 1833 -",
+            bairro: "Sumarezinho"
         },
         {
             titulo: "Ponto 5 - CENTRO",
-            endereco: "Av. Jardim Europa, 333 ",
-            bairro: "Pq. Formosa"
+            endereco: "Praça Dr. João Mendes, 24 -",
+            bairro: "Centro Histórico de São Paulo"
         }
     ]
 
