@@ -20,25 +20,25 @@ export default function Home() {
 				</h2>
 				<div className={styles.centralizador}>
 					<div className={styles.boxsoptions}>
-						<h2 className={styles.comofuncionatitles}>ALUGUE UMA MOTOFASTER</h2>
+						<h2 className={styles.comofuncionatitles}>QUERO ALUGAR UMA MOTOFAST</h2>
 						<div className={styles.info}>
-							<p>Acreditamos que tudo é possível com um pouco de coragem, força e agilidade. Por isso juntamos tudo isso em um só serviço, que te garante flexibilidade, melhor custo-benefício e segurança na hora de alugar sua moto.</p><p>Veja como é fácil: </p>
+							<p>Precisa de uma moto para resolver uma correria do dia a dia ou para trabalhar ? Seja qual for a sua necessidade, a motofast tem um plano pra você!</p><p>Motivos para alugar: </p>
 							<div className={styles.infos}><Image width={14} height={20} src={locate} />
-								<p>Coloque o seu CEP e localize a motofast mais próxima</p>
+								<p> Alugue por 1 dia ou 1 por ano. Aqui temos o melhor plano pra você!</p>
 							</div>
 							<div className={styles.infos}><Image width={15} height={21} src={escolha} />
-								<p>Escolha o plano que mais combina com você</p>
+								<p>Nossas motos estão localizadas em estacionamentos ao lado de estações de metrô de SP.</p>
 							</div>
 							<div className={styles.infos}><Image width={18} height={20} src={preencha} />
-								<p>Faça o seu cadastro (leva apenas alguns minutinhos)</p>
+								<p>Todo processo é feito de forma digital.</p>
 							</div>
 							<div className={styles.infos}><Image width={27} height={19} src={motor} />
-								<p>Retire a sua moto e comece a pilotar!</p>
+								<p>Preço justo e motos econômicas.</p>
 							</div>
 						</div>
 					</div>
 					<div className={styles.boxsoptions}>
-						<h2 className={styles.comofuncionatitles}>QUERO UM MOTOFASTER</h2>
+						<h2 className={styles.comofuncionatitles}>QUERO SER UM MOTOFASTER</h2>
 						<div className={styles.info}>
 							<p>Acreditamos que tudo é possível com um pouco de coragem, força e agilidade. Por isso juntamos tudo isso em um só serviço, que te garante flexibilidade, melhor custo-benefício e segurança na hora de alugar sua moto.</p><p>Veja como é fácil: </p>
 							<div className={styles.infos}><Image width={14} height={20} src={locate} />
