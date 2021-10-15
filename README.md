@@ -36,8 +36,6 @@ UI desenvolvida pelo time Hipster: https://www.figma.com/file/U0XH9kxFqqBYiHRJ57
 
   No caso de um paceiro motofaster que busca ser contratado por seus serviços, a página Sua Conta mostra o histórico de corridas
 
-<hr>
-
 ## Tecnologias Utilizadas [Frontend]
 
 * Next.js
@@ -45,3 +43,32 @@ UI desenvolvida pelo time Hipster: https://www.figma.com/file/U0XH9kxFqqBYiHRJ57
 * Bootstrap
 
 Link para repositório backend: https://github.com/cordeirolucas42/gamaxp-api-motofast
+
+## Equipe
+
+### Desenvolvimento Web
+
+* [Erick Santos](https://github.com/erickscoelhor)
+* [Lucas Cordeiro](https://github.com/cordeirolucas42)
+
+### UI/UX Design
+
+* Geovanna Luvian
+* Vinícius Lopes
+
+### Growth Marketing
+
+* Grabrielle Côrtes
+* Raquel Hauauini
+
+### Inside Sales
+
+* Rosemberg Freitas
+* Wayne Mendes
+
+
+
+
+
+
+
