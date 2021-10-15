@@ -21,11 +21,11 @@ const cepDisplay = (cep) => (
 
 const melhorPlano = (inicio, fim) => {
     const planos = [
-        { nome: "Diário", preco: 44, cents: 99, dias: 1, total: "R$265,93" },
-        { nome: "Semanal", preco: 37, cents: 99, dias: 7, total: "R$1.049,70" },
-        { nome: "Mensal", preco: 34, cents: 99, dias: 30, total: "R$2.699,10" },
-        { nome: "Trimestral", preco: 29, cents: 99, dias: 90, total: "R$4.498,20" },
-        { nome: "Semestral", preco: 24, cents: 99, dias: 180, total: "R$265,93" },
+        { nome: "Diário", preco: 44, cents: 99, dias: 1, total: "R$44,99" },
+        { nome: "Semanal", preco: 37, cents: 99, dias: 7, total: "R$265,93" },
+        { nome: "Mensal", preco: 34, cents: 99, dias: 30, total: "R$1.049,70" },
+        { nome: "Trimestral", preco: 29, cents: 99, dias: 90, total: "R$2.699,10" },
+        { nome: "Semestral", preco: 24, cents: 99, dias: 180, total: "R$4.498,20"  },
         { nome: "Anual", preco: 19, cents: 99, dias: 365, total: "R$7.196,40" },
     ]
     const periodo = (new Date(fim) - new Date(inicio)) / (1000 * 60 * 60 * 24)
