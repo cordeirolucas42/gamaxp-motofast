@@ -30,7 +30,7 @@ const melhorPlano = (inicio, fim) => {
     ]
     const periodo = (new Date(fim) - new Date(inicio)) / (1000 * 60 * 60 * 24)
 
-    return planos.filter(plano => plano.dias > periodo)[0]
+    return planos.filter(plano => plano.dias >= periodo)[0]
 }
 
 export default function Home() {
