@@ -27,8 +27,8 @@
 
 .boxhome {
 	background: #ffffffb3;
-	width: 27.058%;
-	height: 50.978%;
+	width: 365px;
+	height: 365px;
 	border-radius: 100%;
 	left: 50px;
 	top: 175px;
@@ -269,25 +269,25 @@ a.optresmodas:hover, a.optresmodas2:hover, a.optresmodas3:hover {
     align-items: center;
   }
   .boxhome {
-	background: #ffffffb3;
-    width: 200px;
-    height: 199px;
+	  background: #ffffffb3;
+    width: 115px;
+    height: 115px;
     border-radius: 100%;
     left: 50px;
     top: 70px;
     position: relative;
 }
 .imgconfig {
-    top: 48px;
+    top: 20px;
 }
 .imgconfig p {
-font-family: Quicksand;
+  font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
-    font-size: 9px;
+    font-size: 6px;
+    line-height: 7px;
     position: relative;
-    line-height: 14px;
-    margin-top: -20px;
+    margin-top: -10px;
     left: 17px;
     text-align: left;
 }
