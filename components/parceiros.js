@@ -7,11 +7,9 @@ import wpp from '../public/wpp.png'
 import Image from "next/dist/client/image";
 
 const fetcher = async (api) => {
-    console.log("fetcher")
     const [zona, turno] = api
     const res = await fetch(`https://motofast-api.herokuapp.com/motofasters/zona/${zona}/turno/${turno}`)
     const motofasters = await res.json()
-    console.log(motofasters)
     return motofasters
 }
 
@@ -32,11 +30,9 @@ export default function Parceiros() {
     const handleFilter = async (eventKey, event) => {
         event.preventDefault();
         if (zonas.includes(event.target.id)) {
-            console.log("setZona")
             setZona(event.target.id)
             setParceiros(await fetcher([event.target.id, turno]))
         } else if (Object.keys(turnos).includes(event.target.id)) {
-            console.log("setTurno")
             setTurno(event.target.id)
             setParceiros(await fetcher([zona, event.target.id]))
         }

@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Footer from "./footer";
 import Menu from "./menu";
-import styles from '../styles/Home.module.css'
+import SSRProvider from 'react-bootstrap/SSRProvider';
 
 export default function Layout({children}) {
     return (
-        <div>
+        <SSRProvider>
             <Head>
                 <title>motofast</title>
                 <meta name="description" content="Aluguel de motos" />
@@ -20,6 +20,6 @@ export default function Layout({children}) {
             </main>
 
             <Footer/>
-        </div>
+        </SSRProvider>
     )
 }
