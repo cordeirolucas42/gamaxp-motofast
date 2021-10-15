@@ -59,13 +59,13 @@ export default function Home() {
 					<div className={styles.boxsoptionsmodes}>
 						<h1 className={styles.number}>2</h1>
 						<h2>MOTOFASTER</h2>
-						<p>Seja um Motofaster, tenha o empresas que irão te contratar para trabalhar na área e horário que você quiser!</p>
+						<p>Seja um Motofaster. Tenha empresas que irão te contratar para trabalhar na área e horário que você quiser!</p>
 						<a href="#" className={styles.optresmodas2}>QUERO SER MOTOFASTER</a>
 					</div>
 					<div className={styles.boxsoptionsmodes}>
 						<h1 className={styles.number}>3</h1>
 						<h2>PARA EMPRESA</h2>
-						<p>Encontre um Motofaster parara a sua empresa, de acordo com a sua região!</p>
+						<p>Encontre um Motofaster para a sua empresa, de acordo com a sua região!</p>
 						<a href="#" className={styles.optresmodas3}>QUERO UM MOTOFASTER</a>
 					</div>
 				</div>
