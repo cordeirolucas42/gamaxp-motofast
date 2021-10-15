@@ -39,6 +39,10 @@
 	display: flex;
 }
 
+.centralizador2 {
+	display: flex;
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
@@ -257,6 +261,46 @@ a.optresmodas:hover, a.optresmodas2:hover, a.optresmodas3:hover {
   margin-left: 0.5rem;
 }
 
+.agiimg {
+	background: url(../public/agilidade.png);
+    width: 139px;
+    height: 138px;
+    background-size: cover;
+    margin: auto;
+}
+
+.seguimg {
+	background: url(../public/seguranca.png);
+    width: 173px;
+height: 168px;
+    background-size: cover;
+    margin: auto;
+}
+
+.ecoimg {
+	background: url(../public/economia.png);
+    width: 160px;
+height: 160px;
+    background-size: cover;
+    margin: auto;
+}
+
+.faciimg {
+	background: url(../public/facilidade.png);
+    width: 129px;
+height: 129px;
+    background-size: cover;
+    margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .centralizador2 {
+	flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
 @media (max-width: 1000px) {
   .grid {
     width: 100%;
@@ -268,6 +312,7 @@ a.optresmodas:hover, a.optresmodas2:hover, a.optresmodas3:hover {
     justify-content: space-evenly;
     align-items: center;
   }
+  
   .boxhome {
 	  background: #ffffffb3;
     width: 115px;
@@ -278,20 +323,151 @@ a.optresmodas:hover, a.optresmodas2:hover, a.optresmodas3:hover {
     position: relative;
 }
 .imgconfig {
-    top: 20px;
+  top: 20px;
 }
 .imgconfig p {
   font-family: Quicksand;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 6px;
-    line-height: 7px;
-    position: relative;
-    margin-top: -10px;
-    left: 17px;
-    text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6px;
+  line-height: 7px;
+  position: relative;
+  margin-top: -10px;
+  left: 17px;
+  text-align: left;
 }
 .background {
-  height: 225px;
+  height: 382px;
+}
+.agilidade {
+	    margin-top: 15px;
+font-size: 12px;
+line-height: 15px;
+}
+
+.seguranca {
+	margin-top: 4px;
+font-size: 12px;
+line-height: 15px;
+}
+
+.economia {
+	margin-top: 5px;
+font-size: 12px;
+line-height: 15px;
+}
+
+.facilidade {
+	margin-top: 15px;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.boxsoptionsmodes h2 {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0 auto;
+    text-align: center;
+	margin-left: 97px;
+}
+
+.boxsoptionsmodes {
+float: left;
+    width: 254px;
+    height: 168.86px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.boxsoptions p, .boxsoptionsmodes p {
+font-size: 10px;
+line-height: 14px;
+    line-height: 14px;
+    margin: 0 auto;
+	width: 172px;
+	margin-left: 90px;
+}
+
+.boxsoptions p {
+    width: 125px;
+    margin: 0 auto;
+}
+
+.boxsoptions {
+        margin-bottom: 50px;
+		width: 140px;
+}
+
+.title {
+	font-size: 16px;
+line-height: 20px;
+letter-spacing: 0.125em;
+}
+.number {
+	font-size: 165px;
+line-height: 206px;
+position: absolute;
+}
+.optresmodas {
+width: 120px !important;
+    height: 46.86px;
+    font-size: 10px;
+    padding: 3px 12px;
+    letter-spacing: 0.175em;
+	margin: -43px auto !important;
+	margin-left: 116px !important;
+}
+.optresmodas2 {
+    width: 118.87px !important;
+height: 46.42px;
+    font-size: 10px;
+    padding: 3px 12px;
+    letter-spacing: 0.175em;
+	margin: -43px auto !important;
+	margin-left: 116px !important;
+}
+.optresmodas3 {
+width: 120px !important;
+    height: 46.86px;
+    font-size: 10px;
+    padding: 3px 12px;
+    letter-spacing: 0.175em;
+	margin: -41px auto !important;
+	margin-left: 116px !important;
+}
+
+.agiimg {
+	background: url(../public/agilidade.png);
+    width: 51.76px;
+    height: 51.39px;
+    background-size: cover;
+    margin: auto;
+}
+
+.seguimg {
+	background: url(../public/seguranca.png);
+    width: 64.42px;
+height: 62.56px;
+    background-size: cover;
+    margin: auto;
+}
+
+.ecoimg {
+	background: url(../public/economia.png);
+    width: 60px;
+height: 60px;
+    background-size: cover;
+    margin: auto;
+}
+
+.faciimg {
+	background: url(../public/facilidade.png);
+    width: 48px;
+height: 48px;
+    background-size: cover;
+    margin: auto;
+}
+div#ajuste {
+    margin-top: -16px;
 }
 }
