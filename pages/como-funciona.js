@@ -22,7 +22,7 @@ export default function Home() {
 					<div className={styles.boxsoptions}>
 						<h2 className={styles.comofuncionatitles}>QUERO ALUGAR UMA MOTOFAST</h2>
 						<div className={styles.info}>
-							<p>Precisa de uma moto para resolver uma correria do dia a dia ou para trabalhar ? Seja qual for a sua necessidade, a motofast tem um plano pra você!</p><p>Motivos para alugar: </p>
+							<p>Precisa de uma moto para resolver uma correria do dia a dia ou para trabalhar? Seja qual for a sua necessidade, a motofast tem um plano pra você!</p><p>Motivos para alugar: </p>
 							<div className={styles.infos}><Image width={14} height={20} src={locate} />
 								<p> Alugue por 1 dia ou 1 por ano. Aqui temos o melhor plano pra você!</p>
 							</div>
