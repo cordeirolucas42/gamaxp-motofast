@@ -1,6 +1,6 @@
 import styles from '../styles/Planos.module.css'
 import moto from '../public/parceiro.png'
-import local from '../public/local.png'
+import pin from '../public/local.png'
 import lupa from '../public/lupa.png'
 import arrows from '../public/arrows.png'
 import { useState } from 'react'
@@ -9,7 +9,6 @@ import Image from "next/dist/client/image";
 
 const fetcher = async (api) => {
     const [cep, inicio, fim] = api
-    console.log(cep, inicio, fim)
     const res = await fetch(`https://motofast-api.herokuapp.com/locais/proximos/${cep}/inicio/${inicio}/fim/${fim}`)
     return await res.json()
 }
@@ -19,12 +18,12 @@ export default function Home() {
     const [inicio, setInicio] = useState("")
     const [fim, setFim] = useState("")
 
-    const [locais, setLocais] = useState([])
+    const [local, setLocal] = useState({})
 
     const handleSubmit = async (evt) => {
         console.log("handleSubmit")
         evt.preventDefault();
-        setLocais(await fetcher([cep, inicio, fim]))        
+        setLocal(await fetcher([cep, inicio, fim]))        
     }
 
     return (
@@ -38,7 +37,7 @@ export default function Home() {
 
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.local}>
-                        <Image src={local} alt="ícone de local"/>
+                        <Image src={pin} alt="ícone de local"/>
                     </div>
 
                     <div className={styles.input}>
@@ -87,30 +86,26 @@ export default function Home() {
                     </button>
                 </form>
 
-                {locais.map(local => {
-                    if (local.motos <= 0) return
-                    return (
-                        <div key={local.endereco} className={styles.ponto}>
-                            <h3 className={styles.nome}>Ponto 1 - ZONA NORTE</h3>
-                            <div className={styles.infos}>
-                                <div className={styles.col}>
-                                    <div className={styles.moto}>
-                                        <Image layout="fixed" src={moto} alt="ícone de moto"/>
-                                        <span className={styles.qty}>{local.motos}</span>
-                                        <span className={styles.texto}>&nbsp;motofast disponíveis</span>
-                                    </div>
-                                    {/* <p className={styles.endereco}>{local.endereco}</p> */}
-                                    <p className={styles.endereco}>Av. Jardim América, 122 - Pq. Flores </p>
+                { local.endereco &&
+                    <div className={styles.ponto}>
+                        <h3 className={styles.nome}>Ponto 1 - Zona {local.zona}</h3>
+                        <div className={styles.infos}>
+                            <div className={styles.col}>
+                                <div className={styles.moto}>
+                                    <Image layout="fixed" src={moto} alt="ícone de moto"/>
+                                    <span className={styles.qty}>{local.motos}</span>                                    
+                                    <span className={styles.texto}>&nbsp;motofast {local.motos > 1 ? "disponíveis" : "disponível"}</span>
                                 </div>
-                                <div className={styles.col}>
-                                    <p className={styles.plano}>Plano Semanal</p>
-                                    <p className={styles.preco}><span className={styles.destaque}>R$37,</span>99/Dia</p>
-                                    <p className={styles.descricao}>Nesse plano você paga o total de <span className={styles.total}>R$265,93</span></p>
-                                </div>
+                                <p className={styles.endereco}>{local.endereco}</p>
+                            </div>
+                            <div className={styles.col}>
+                                <p className={styles.plano}>Plano Semanal</p>
+                                <p className={styles.preco}><span className={styles.destaque}>R$37,</span>99/Dia</p>
+                                <p className={styles.descricao}>Nesse plano você paga o total de <span className={styles.total}>R$265,93</span></p>
                             </div>
                         </div>
-                    )
-                })}
+                    </div>
+                }
             </div>            
         </Layout>
     )

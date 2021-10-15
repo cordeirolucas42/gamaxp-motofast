@@ -6,31 +6,41 @@ import moto from '../public/parceiro.png'
 import wpp from '../public/wpp.png'
 import Image from "next/dist/client/image";
 
+const fetcher = async (api) => {
+    console.log("fetcher")
+    const [zona, turno] = api
+    const res = await fetch(`https://motofast-api.herokuapp.com/motofasters/zona/${zona}/turno/${turno}`)
+    const motofasters = await res.json()
+    console.log(motofasters)
+    return motofasters
+}
+
 export default function Parceiros() {
     const [zona, setZona] = useState("Norte")
     const [turno, setTurno] = useState("Tarde")
 
-    const nomes = ["Luana Silveira", "Mayara Castro", "Daniel Frank"]
+    const [parceiros, setParceiros] = useState([])
+
     const zonas = ["Norte", "Sul", "Leste", "Oeste", "Centro"]
-    const turnos = [
-        {turno: "Manhã", horario: "6h - 12h"},
-        {turno: "Tarde", horario: "12h - 18h"},
-        {turno: "Noite", horario: "18h - 00h"},
-        {turno: "Madrugada", horario: "00h - 6h"}
-    ]
-    const parceiros = []
-    zonas.forEach(zona => (
-        turnos.forEach(turno => (
-            [1,2,3].forEach(i => (
-                parceiros.push({
-                    nome: nomes[i-1],
-                    zona: zona,
-                    turno: turno.turno,
-                    horario: turno.horario
-                })
-            ))
-        ))
-    ))
+    const turnos = {
+        "Manhã": "06:00 - 12:00",
+        "Tarde": "12:00 - 18:00",
+        "Noite": "18:00 - 00:00",
+        "Madrugada": "00:00 - 06:00"
+    }
+
+    const handleFilter = async (eventKey, event) => {
+        event.preventDefault();
+        if (zonas.includes(event.target.id)) {
+            console.log("setZona")
+            setZona(event.target.id)
+            setParceiros(await fetcher([event.target.id, turno]))
+        } else if (Object.keys(turnos).includes(event.target.id)) {
+            console.log("setTurno")
+            setTurno(event.target.id)
+            setParceiros(await fetcher([zona, event.target.id]))
+        }
+    }
         
     return (
         <div className={styles.parceiros}>
@@ -38,21 +48,19 @@ export default function Parceiros() {
             <span className={styles.titulo}>PARCEIROS</span></p>
 
             <div className={styles.botoes}>
-                <DropdownButton id={styles.zona} title="Zona">
+                <DropdownButton id={styles.zona} title="Zona" onSelect={handleFilter}>
                     {zonas.map((zona, index) => (
-                        <Dropdown.Item key={index} onClick={e => setZona(zona)}>{zona}</Dropdown.Item>
+                        <Dropdown.Item key={index} id={zona}>{zona}</Dropdown.Item>
                     ))}
                 </DropdownButton>
-                <DropdownButton id={styles.turno} title="Horários">
-                    {turnos.map((turno, index) => (
-                        <Dropdown.Item key={index} onClick={e => setTurno(turno.turno)}>{turno.turno}</Dropdown.Item>
+                <DropdownButton id={styles.turno} title="Horários" onSelect={handleFilter}>
+                    {Object.keys(turnos).map((turno, index) => (
+                        <Dropdown.Item key={index} id={turno}>{turno}</Dropdown.Item>
                     ))}
                 </DropdownButton>
             </div>
 
-            {parceiros
-            .filter(p => p.zona.includes(zona) && p.turno.includes(turno))
-            .map((parceiro, index) => (
+            {parceiros && parceiros.map((parceiro, index) => (
                 <div key={index} className={styles.parceiro}>
                     <div className={styles.parceiroNome}>
                         <Image layout="fixed" src={moto} alt="ícone de moto"/>
@@ -63,7 +71,7 @@ export default function Parceiros() {
                             Zona: {parceiro.zona}
                         </span>
                         <span className={styles.parceiroTexto}>
-                            Horário Disponível: <span>{parceiro.horario}</span>
+                            Horário Disponível: <span>{turnos[parceiro.turno]}</span>
                         </span>
                         <a href="#">
                             <Image layout="fixed" width={30} height={34} src={wpp} alt="logo do whatsapp"/>
